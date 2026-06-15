@@ -41,4 +41,39 @@ function divide(a, b) {
   return a / b;
 }
 
-module.exports = { add, subtract, multiply, divide };
+/**
+ * Modulo: Calculate the remainder of a divided by b
+ * @param {number} a - Dividend
+ * @param {number} b - Divisor
+ * @returns {number|string} Remainder of a % b or error message if b is 0
+ */
+function modulo(a, b) {
+  if (b === 0) {
+    return "Error: Modulo by zero is not allowed";
+  }
+  return a % b;
+}
+
+/**
+ * Power (Exponentiation): Raise base to the exponent
+ * @param {number} base - The base number
+ * @param {number} exponent - The exponent
+ * @returns {number} Result of base raised to the exponent
+ */
+function power(base, exponent) {
+  return Math.pow(base, exponent);
+}
+
+/**
+ * Square Root: Calculate the square root of a number with error handling for negative numbers
+ * @param {number} n - The number to find the square root of
+ * @returns {number|string} The square root of n or error message if n is negative
+ */
+function squareRoot(n) {
+  if (n < 0) {
+    return "Error: Cannot calculate square root of negative number";
+  }
+  return Math.sqrt(n);
+}
+
+module.exports = { add, subtract, multiply, divide, modulo, power, squareRoot };
